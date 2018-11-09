@@ -90,7 +90,7 @@ input {
 .map-bg{
 	height:850px;
 	width: 850pxx;
-	background-image: url('../pulse-ride-master/images/cover.jpg');
+	background-image: url('cover.jpg');
 	background-size: cover;
 	text-align:center;
 	
