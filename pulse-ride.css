@@ -11,6 +11,12 @@ h1 {
   text-align: center;
 }
 
+h2{
+	padding-top: 15px;
+	font-size: 45px;
+  text-align: center
+	
+}
 p {
   font-size: 20px;
   text-align: center;
@@ -81,3 +87,34 @@ input {
   text-align: center;
   text-decoration: none;
 }
+.map-bg{
+	height:850px;
+	width: 850pxx;
+	background-image: url('../pulse-ride-master/images/cover.jpg');
+	background-size: cover;
+	text-align:center;
+	
+}
+.txt-container{
+	font-size: 35px;
+	padding: 5px;
+	
+	
+}
+nav{
+	 font-size: 40px;
+	text-align: center;
+	background-color:white;
+	
+	
+}
+.checkbox{
+	border-radius: 10px;
+  height: 20px;
+  font-size: 10px;
+  width: 60px;
+	
+	
+	
+}
+/*add*/
