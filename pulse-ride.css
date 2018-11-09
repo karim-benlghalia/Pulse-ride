@@ -1,3 +1,7 @@
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
 body {
   background-color: rgb(170, 227, 241)
 }
@@ -43,7 +47,31 @@ input {
 }
 
 .primary-button {
-  background-color: rgb(39, 80, 159); /* Green */
+  background-color: rgb(39, 80, 159); /* Blue */
+  border-radius: 10px;
+  color:#F4F4F8;
+  display: inline-block;
+  font-size: 20px;
+  margin: 5px auto;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.accept-button {
+  background-color: rgb(69, 209, 87); /* Green */
+  border-radius: 10px;
+  color:#F4F4F8;
+  display: inline-block;
+  font-size: 20px;
+  margin: 5px auto;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.custom-button {
+  background-color: rgb(237, 244, 100); /* Yellow */
   border-radius: 10px;
   color:#F4F4F8;
   display: inline-block;
