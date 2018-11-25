@@ -1,26 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <title>Pulse Ride</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="./script.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD50Fe0-c7wPf_16NO05oeKEP4CBoPEmxI&libraries=places&callback=initMap"
+    ></script>
   <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link href="pulse-ride.css" rel="stylesheet" />
 </head>
 <body>
-  <div class="centered-div">
-    <h1>Pulse Ride</h1>
-    <p>Based on what we know about you and your destination, we suggest that you travel to your destination via:</p>
-    <p><b>Lyft</b></p>
-      <form action="redirect.html">
-        <button type="submit" value="Accept" class="accept-button">Accept</button>
-      </form>
-      <p>Want to go your own way?</p>
-      <form action="customize.html">
-        <button type="submit" class="primary-button">Customize</button>
-      </form>
+    <script src="./script.js"></script>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">Your Account</a>
+        <a href="#">Your Itineraries</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+      </div>
+     <div id="menu"> <span id="menu" onclick="openNav()">&#9776;    <img id="logoImg" src="./images/logo.png" alt="Pulse Ride"></span></div>
+  
+     <div class="main">
+        <div  id="geometryL2"></div>
+        <div class="card-block" id="geometryD"></div>
     </div>
+    <script>
+        
+        
+        calculateDistance();
+        
+        </script>  
   </body>
-  <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
-  <script src="./FirebaseModels.js"></script>
   </html>

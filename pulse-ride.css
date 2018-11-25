@@ -2,8 +2,12 @@
   font-family: 'Roboto', sans-serif;
 }
 
-body {
-  background-color: rgb(170, 227, 241)
+html,body {
+  background-color: rgb(170, 227, 241);
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
 
 h1 {
@@ -15,7 +19,7 @@ h2{
 	padding-top: 15px;
 	font-size: 45px;
   text-align: center
-
+	
 }
 p {
   font-size: 20px;
@@ -87,40 +91,173 @@ input {
   text-align: center;
   text-decoration: none;
 }
-.map-bg{
-	height:850px;
-	width: 850pxx;
-	background-image: url('cover.jpg');
-	background-size: cover;
-	text-align:center;
-
+#map {
+  height: 100%;
+  width: 100%;
+   top: 0; 
+  left: 0;
+  
+  position: absolute; 
+  z-index: 0; /* Set z-index to 0 as it will be on a layer below the contact form */
 }
 .txt-container{
 	font-size: 35px;
 	padding: 5px;
-
-
+	
+	
 }
 nav{
 	 font-size: 40px;
 	text-align: center;
 	background-color:white;
-
-
+	
+	
 }
 .checkbox{
 	border-radius: 10px;
   height: 20px;
   font-size: 10px;
   width: 60px;
+	
+	
+	
 }
-/*custimize*/
-table, th, td {
-    border: 1px solid white;
+#CurrentL,#desinL {
+  background-color: #fff;
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+  margin-left: 12px;
+  padding: 0 11px 0 13px;
+  text-overflow: ellipsis;
+  width: 316px;
 }
-th, td {
-    padding: 15px;
+
+#description {
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+#infowindow-content .title {
+  font-weight: bold;
+}
+
+#infowindow-content {
+  display: none;
 }
 
 
+ #infowindow-content {
+  display: inline;
+}
+#divForm {
+  display: inline-block;
+  position: relative; 
+  
+  width: 360px;
+  margin: 30px 0px 0px 0px;
+  padding: 10px;
+  background: white;
+ height: auto;
+    z-index: 2;
+  opacity: 1; 
+    /*color: white;*/
+}
+#formatted-address,#address-components,#geometry{
+    display: inline-block;
+    position: relative; 
+    
+    width: 350px;
+    margin: 130px 0px 0px 0px;
+    padding: 10px;
+    background: white;
+   height: 300px;
+      z-index: 2;
+    opacity: 1; 
+
+}
+#pac-container {
+  padding-bottom: 12px;
+  margin-right: 12px;
+}
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(170, 227, 241);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  z-index: 4;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+.sidenav {padding-top: 15px;}
+.sidenav a {font-size: 18px;}
+}
+#text{
+  font-size: 12px;
+}
+#menu{
+  display: inline-block;
+  position: relative; 
+  z-index: 3;
+  opacity: 1;
+  font-size:30px;
+  cursor:pointer;
+  background: rgb(170, 227, 241);
+  color: #046BB6;
+  width: 100%;
+  height: 50px;
+  text-align: left;
+  padding-left: 5px;
+ 
+}
+#logoImg{
+
+  margin-bottom: 2px;
+  margin-top: 2px;
+}
+#footer{
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 5px;
+  text-align: center; 
+  font-size:15px;
+  z-index: 3;
+  opacity: 1;
+  background: rgb(170, 227, 241);
+  width: 100%;
+  height: 30px;
+  text-align: center;
+  
+}
 /*add*/

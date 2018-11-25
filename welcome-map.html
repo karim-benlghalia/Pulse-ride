@@ -1,30 +1,84 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <title>Pulse Ride</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="./script.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD50Fe0-c7wPf_16NO05oeKEP4CBoPEmxI&libraries=places&callback=initMap"
+    ></script>
   <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link href="pulse-ride.css" rel="stylesheet" />
+ 
+ 
+
 </head>
 <body>
-  <div>
+    <body>  
+        <script src="./script.js"></script>
 
-	</div>
-  <div class="map-bg">
-  <nav>Pulse Ride</nav>
-  <h2>Hello, Adam</h2>
-  <p class="txt-container">Where do you want to go?</p>
-   <table style="margin-bottom: 10px">
-   <tr>
-        <td><input type="text"></td>
-  </tr>
-   </table>
-    <form action="results.html">
-     <button type="submit" class="primary-button">Find your Route</button>
-  </form>
-  </div>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#">Your Account</a>
+            <a href="#">Your Itineraries</a>
+            <a href="#">Clients</a>
+            <a href="#">Contact</a>
+          </div>
+         <div id="menu"> <span id="menu" onclick="openNav()">&#9776;    <img id="logoImg" src="./images/logo.png" alt="Pulse Ride"></span></div>
+          <div id="main">
+        <div id ="divForm">
+          
+            <p>Hello User</p>
+        <div>
+            <p id="text">Please Enter your current location and your destination</p>
+        </div>
+        
+        <form id="location-form" action="./results.html" method="get">
+                <div id="pac-container">
+                <input type="text" id="CurrentL" placeholder="Enter your location" >
+                </div>
+                <div id="pac-container">
+                <input type="text" id="desinL"  placeholder="Enter a destination">
+                </div>
+                <input type="submit" class="btn btn-primary btn-block" value="Find route" onclick="saveLsorage()">
+    
+        </form>
+     
+       
+    
+    
+    </div>
+            
+    
+    
+       
+    
+        <div id="map"></div>
+        <div id="infowindow-content">
+                <img src="" width="16" height="16" id="place-icon">
+                <span id="place-name"  class="title"></span><br>
+                <span id="place-address"></span>
+              </div>
+    
+            
+                  
+              <div class="card-block" id="geometryL"></div>
+              <div class="card-block" id="geometryD"></div>
+                  
+            <script>
+                    function saveLsorage(){
+    
+                        localStorage.adress1=document.getElementById('CurrentL').value;
+                        localStorage.adress2=document.getElementById('desinL').value;
+                       
+                    }
+            
+            </script>
+      </div>
+      <div id="footer">PulseRide Copyright 2018</div>
+    </body>
+
 </body>
-<script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
-<script src="./FirebaseModels.js"></script>
 </html>
