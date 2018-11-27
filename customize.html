@@ -5,9 +5,21 @@
   <title>Pulse Ride</title>
   <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-  <link href="pulse-ride.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <link href="pulse-ride.css" rel="stylesheet"/>
+  <script src="./script.js"></script>
 </head>
 <body>
+  <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#">Your Account</a>
+            <a href="#">Your Itineraries</a>
+            <a href="#">Clients</a>
+            <a href="#">Contact</a>
+          </div>
+         <div id="menu"> <span id="menu" onclick="openNav()">&#9776;    
+          <a href="index.html"><img id="logoImg" src="./logo.png" alt="Pulse Ride"></a></span></div>
+          
   <div class="centered-div">
     <h1>Customize your result</h1>
     <p>Your current suggested mode of transportation is Lyft. Here are the cost and travel time for all the other
@@ -16,7 +28,7 @@
       <tr style="font-size: 20px">
         <th >Mode</th>
         <th >Cost</th>
-        <th >Travle Time</th>
+        <th >Travel Time</th>
       </tr>
       <tr>
         <td>Lyft</td>
