@@ -26,16 +26,14 @@
       <table style="margin-bottom: 10px">
         <tr>
           <td>username</td>
-          <td><input type="text"></td>
+          <td><input id="username_input" type="email" placeholder="Email..."></td>
         </tr>
         <tr>
           <td>password</td>
-          <td><input type="password"></td> 
+          <td><input id="password_input" type="password" placeholder="Password..."></td> 
         </tr>
       </table>
-      <form action="./welcome-map.html">
-        <button type="submit" class="primary-button">Log In!</button>
-      </form>
+        <button type="submit" class="primary-button" onclick="loginUser()">Log In!</button>
       <p>Don't have an account yet?</p>
     <form action="registration.html">
       <button type="submit" class="primary-button">Sign Up!</button>
