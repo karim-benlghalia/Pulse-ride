@@ -6,6 +6,19 @@
   <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link href="pulse-ride.css" rel="stylesheet" />
+  <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase.js"></script>
+  <!-- <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyDYk2XKh2RrlfyYSfBP7tdD0_wHoziCBFU",
+      authDomain: "pulse-ride188.firebaseapp.com",
+      databaseURL: "https://pulse-ride188.firebaseio.com",
+      projectId: "pulse-ride188",
+      storageBucket: "pulse-ride188.appspot.com",
+      messagingSenderId: "1040848890807"
+    };
+    firebase.initializeApp(config);
+  </script> -->
 </head>
 <body>
   <div class="centered-div">
@@ -18,18 +31,18 @@
         <td><input type="text"></td>
       </tr>
       <tr>
-        <td width="200px">Email</td>
-        <td><input type="password"></td> 
+        <td width="200px" >Email</td>
+        <td><input type="text" id="register_email"></td>
       </tr>
 	   <tr>
         <td width="200px">Password</td>
-        <td><input type="text"></td>
+        <td><input type="text" id="register_password"></td>
       </tr>
       <tr>
         <td width="50%">Do you have a car?</td>
         <td width="50%">Yes<input type="checkbox" class ="checkbox" checked="checked">NO<input type="checkbox"  class ="checkbox" >
 
-</td> 
+</td>
       </tr>
 	   <tr>
       </tr>
@@ -42,15 +55,15 @@
         <td width="50%">Please choose your optimization</td>
         <td width="50%">Time optimization<input type="checkbox" class ="checkbox" checked="checked">Cost Optimization<input type="checkbox"  class ="checkbox" >
 
-</td> 
+</td>
       </tr>
-	  
+
     </table>
-    <form action="welcome-map.html">
-      <button type="submit" class="primary-button">Register</button>
-    </form>
+    <!-- <form action="welcome-map.html"> -->
+      <button type="submit" class="primary-button" onClick="registerUser()">Register</button>
+    <!-- </form> -->
   </div>
 </body>
-<script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+<!-- <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script> -->
 <script src="./FirebaseModels.js"></script>
 </html>
