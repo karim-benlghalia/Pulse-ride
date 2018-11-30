@@ -267,7 +267,7 @@ function callback(response, status) {
           }
         }
         else if(fixedDistance > 7) {
-          resultMode = 'Driving'
+          resultMode = 'Car'
         }
         else {
           resultMode = 'Bus'
@@ -299,7 +299,7 @@ function closeNav() {
 
 function redirect() {
   redir = ''
-  if(resultMode == 'Driving' || resultMode == 'Bus' || resultMode == 'Bike share') {
+  if(resultMode == 'Car' || resultMode == 'Bus' || resultMode == 'Bike share') {
     redir = "https://www.google.com/maps";
   }
   else if(resultMode == 'Uber') {

@@ -70,6 +70,19 @@ input {
     text-decoration: none;
 }
 
+.small-button {
+    background-color: rgb(39, 80, 159);
+    /* Blue */
+    border-radius: 10px;
+    color: #F4F4F8;
+    display: inline-block;
+    font-size: 20px;
+    margin: 2px auto;
+    padding: 4px 12px;
+    text-align: center;
+    text-decoration: none;
+}
+
 .accept-button {
     background-color: rgb(69, 209, 87);
     /* Green */

@@ -45,5 +45,4 @@ function redirect() {
 
 window.onload = function() {
   populateModeTable();
-  getOptimalMode();
 };
