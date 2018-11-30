@@ -21,9 +21,9 @@
           <a href="index.html"><img id="logoImg" src="./logo.png" alt="Pulse Ride"></a></span></div>
           
   <div class="centered-div">
-    <h1>Customize your result</h1>
-    <p>Your current suggested mode of transportation is Lyft. Here are the cost and travel time for all the other
-    available modes.</p>
+    <h1>Customize your travel</h1>
+    <p>Your current suggested mode of transportation is Lyft. You may also choose from the rest of the available methods below.</p>
+    
     <table style="width:100%">
       <tr style="font-size: 20px">
         <th >Mode</th>
@@ -32,30 +32,32 @@
       </tr>
       <tr>
         <td>Lyft</td>
-        <td>$30.6</td>
-        <td>40 mins</td>
+        <td id="lyft_price"></td>
+        <td id="lyft_time"></td>
       </tr>
       <tr>
         <td>Uber</td>
-        <td>$35.6</td>
-        <td>40 mins</td>
+        <td id="uber_price"></td>
+        <td id="uber_time"></td>
       </tr>
       <tr>
         <td>Driving</td>
-        <td>$25</td>
-        <td>35 mins</td>
+        <td id="drive_price"></td>
+        <td id="drive_time"></td>
       </tr>
       <tr>
         <td>Bus</td>
-        <td>$5</td>
-        <td>80 mins</td>
+        <td id="bus_price"></td>
+        <td id="bus_time"></td>
       </tr>
       <tr>
-        <td>Biking</td>
-        <td>$3</td>
-        <td>150 mins</td>
+        <td>Bike Share</td>
+        <td id="bike_price"></td>
+        <td id="bike_time"></td>
       </tr>
     </table>
   </div>
 </body>
+<script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+<script src="./getResults.js"></script>
 </html>
