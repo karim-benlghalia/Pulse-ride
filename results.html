@@ -24,20 +24,18 @@
       </div>
      <div id="menu"> <span id="menu" onclick="openNav()">&#9776;    
       <a href="index.html"><img id="logoImg" src="./logo.png" alt="Pulse Ride"></a></span></div>
-  
-     <div class="main">
-        <div  id="geometryL2"></div>
-        <div class="card-block" id="geometryD"></div>
-    </div>
     <script>
-        
-        
         calculateDistance();
-        
     </script>  
     <div class="centered-div">
+      <script>
+        getOptimalMode();
+      </script>
     <p>Based on what we know about you and your destination, we suggest that you travel to your destination via:</p>
-    <p><b>Lyft</b></p>
+    <b><p id="result"></p></b>
+    <div class="main">
+        <div id="distance"></div>
+    </div>
     <form action="redirect.html">
       <button type="submit" value="Accept" class="accept-button">Accept</button>
     </form>
@@ -46,5 +44,6 @@
       <button type="submit" class="primary-button">Customize</button>
     </form>
   </div>
+  <script src="./getResults.js"></script>
   </body>
   </html>

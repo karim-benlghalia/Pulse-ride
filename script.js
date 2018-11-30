@@ -214,7 +214,7 @@ function callback(response, status) {
         var destination = response.destinationAddresses[0];
         var Showtxt ="Better get on a plane. There are no roads between "  + origin + " and " + destination;
         if (response.rows[0].elements[0].status === "ZERO_RESULTS") {
-            document.getElementById('geometryL').innerHTML= Showtxt;
+            //document.getElementById('geometryL').innerHTML= Showtxt;
 
         } else {
             
@@ -233,15 +233,38 @@ function callback(response, status) {
          <ul class="list-group">
         <li class="list-group-item"><strong>Distance in mile</strong>: ${fixedDistance}</li>
         <li class="list-group-item"><strong>Duration in second</strong>: ${duration_minutes}</li>
+
           </ul>
         `;
 
     // Output to app
-         
-        document.getElementById('geometryD').innerHTML = geometryOutput2;
+        console.log(fixedDistance);
+        console.log(duration_minutes);
+        rand = Math.round(Math.random());
+        console.log(rand);
+        resultMode = 'Lyft';
+        if(fixedDistance < 1 || (duration_minutes < 10 && rand == 0)) {
+          resultMode = 'Bike share'
+        }
+        else if(fixedDistance < 2) {
+          if(rand == 0) {
+            resultMode = 'Lyft'
+          }
+          else {
+          resultMode = 'Uber'
+          }
+        }
+        else if(fixedDistance > 7) {
+          resultMode = 'Driving'
+        }
+        else {
+          resultMode = 'Bus'
+        }
+        document.getElementById('result').innerHTML = resultMode;
+        document.getElementById('distance').innerHTML = 'Distance: ' + fixedDistance + ' miles';
+        //document.getElementById('geometryD').innerHTML = geometryOutput2;
        // localStorage.dist1=fixedDistance;
 
-            
         }
         
     }
