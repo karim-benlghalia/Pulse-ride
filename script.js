@@ -249,11 +249,34 @@ function callback(response, status) {
           </ul>
         `;
 
-            // Output to app
-
-            document.getElementById('geometryD').innerHTML = geometryOutput2;
-            // localStorage.dist1=fixedDistance;
-
+    // Output to app
+        console.log(fixedDistance);
+        console.log(duration_minutes);
+        rand = Math.round(Math.random());
+        console.log(rand);
+        resultMode = 'Lyft';
+        if(fixedDistance < 1 || (duration_minutes < 10 && rand == 0)) {
+          resultMode = 'Bike share'
+        }
+        else if(fixedDistance < 2) {
+          if(rand == 0) {
+            resultMode = 'Lyft'
+          }
+          else {
+          resultMode = 'Uber'
+          }
+        }
+        else if(fixedDistance > 7) {
+          resultMode = 'Driving'
+        }
+        else {
+          resultMode = 'Bus'
+        }
+        sessionStorage.setItem("resultMode", resultMode);
+        document.getElementById('result').innerHTML = resultMode;
+        document.getElementById('distance').innerHTML = 'Distance: ' + fixedDistance + ' miles';
+        //document.getElementById('geometryD').innerHTML = geometryOutput2;
+       // localStorage.dist1=fixedDistance;
 
         }
 
@@ -272,4 +295,20 @@ function openNav() {
 
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
+}
+
+function redirect() {
+  redir = ''
+  if(resultMode == 'Driving' || resultMode == 'Bus' || resultMode == 'Bike share') {
+    redir = "https://www.google.com/maps";
+  }
+  else if(resultMode == 'Uber') {
+    redir = "get.uber.com";
+  }
+  else {
+    redir = "https://www.lyft.com/app";
+  }
+    window.setTimeout(function(){
+      window.location.href = redir;
+    }, 3000);
 }
