@@ -272,7 +272,7 @@ function callback(response, status) {
         else {
           resultMode = 'Bus'
         }
-        sessionStorage.setItem("resultMode", resultMode);
+        window.suggested = resultMode;
         document.getElementById('result').innerHTML = resultMode;
         document.getElementById('distance').innerHTML = 'Distance: ' + fixedDistance + ' miles';
         //document.getElementById('geometryD').innerHTML = geometryOutput2;

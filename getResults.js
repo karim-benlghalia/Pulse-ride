@@ -1,7 +1,5 @@
 
-function getOptimalMode() {
-  console.log("getting optimal mode")
-}
+
 
 function populateModeTable() {
   
@@ -39,6 +37,10 @@ function populateModeTable() {
 
   document.getElementById('bike_price').innerHTML = '$' + ((n*bike_max) + bus_min).toFixed(2)
   document.getElementById('bike_time').innerHTML = Math.ceil(n*bike_time) + ' mins'
+}
+
+function redirect() {
+
 }
 
 window.onload = function() {
