@@ -245,7 +245,7 @@ function callback(response, status) {
             var geometryOutput2 = `
          <ul class="list-group">
         <li class="list-group-item"><strong>Distance in mile</strong>: ${fixedDistance}</li>
-        <li class="list-group-item"><strong>Duration in second</strong>: ${duration_minutes}</li>
+        <li class="list-group-item"><strong>Duration in minutes</strong>: ${duration_minutes}</li>
           </ul>
         `;
 
