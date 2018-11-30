@@ -83,6 +83,15 @@ input {
     text-decoration: none;
 }
 
+a:link#acceptlink,
+#acceptlink a:visited,
+#acceptlink a:hover {
+  color: white;
+  cursor: default;
+  text-decoration: none;
+}
+
+
 .custom-button {
     background-color: rgb(237, 244, 100);
     /* Yellow */

@@ -27,7 +27,7 @@ function populateModeTable() {
   document.getElementById('lyft_time').innerHTML = Math.ceil(n*rideshare_time) + ' mins'
 
   document.getElementById('uber_price').innerHTML = '$' + ((n*uber_max) + uber_min).toFixed(2)
-  document.getElementById('uber_time').innerHTML = Math.ceil(n*rideshare_time) + ' mins'
+  document.getElementById('uber_time').innerHTML = Math.ceil(n*rideshare_time - 1) + ' mins'
 
   document.getElementById('drive_price').innerHTML = '$' + ((n*drive_max) + drive_min).toFixed(2)
   document.getElementById('drive_time').innerHTML = Math.ceil(n*drive_time) + ' mins'
