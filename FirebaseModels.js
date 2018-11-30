@@ -43,7 +43,7 @@ function loginUser() {
   let userPassword = document.getElementById('password_input').value
   firebase.auth().signInWithEmailAndPassword(userEmail, userPassword).then(
     function() { // A hacky way to navigate to the next page
-      window.location.href = window.location.href.replace("index.html", "welcome-map.html")
+      // window.location.href = window.location.href.replace("index.html", "welcome-map.html")
       window.location.href = "welcome-map.html";
     }
   )
